@@ -66,19 +66,22 @@ $(".type-term").on("click", function() {
       // Prependng the termDiv to the HTML page in the "#gifs-appear-here" div
       $("#gifs-appear-here").prepend(termDiv);
     }
+    $(".gif").on("click", function() {
+  state = $(this).attr("data-state");
+  console.log(state);
+  if (state == 'still'){
+      var animatedSrc = $(this).attr("data-animate");
+      $(this).attr("data-state", "animate");
+      $(this).attr("src", animatedSrc);
+    }
+    else {
+      var stillSrc = $(this).attr("data-still");
+      $(this).attr("data-state", "still");
+      $(this).attr("src", stillSrc);
+    }
+});
+
   });
 });
 
 
-$(".gif").on("click", function() {
-  state = $(this).attr("data-state");
-  console.log(state);
-  if (state == 'still'){
-      $(this).attr("data-state", "animate");
-      $(this).attr("src", results[i].images.fixed_height.url);
-    }
-    else {
-      $(this).attr("data-state", "still");
-      $(this).attr("src", results[i].images.fixed_height_still.url);
-    }
-});
