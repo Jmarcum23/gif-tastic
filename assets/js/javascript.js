@@ -67,19 +67,19 @@ $(".type-term").on("click", function() {
       $("#gifs-appear-here").prepend(termDiv);
     }
     $(".gif").on("click", function() {
-  state = $(this).attr("data-state");
-  console.log(state);
-  if (state == 'still'){
-      var animatedSrc = $(this).attr("data-animate");
-      $(this).attr("data-state", "animate");
-      $(this).attr("src", animatedSrc);
-    }
-    else {
-      var stillSrc = $(this).attr("data-still");
-      $(this).attr("data-state", "still");
-      $(this).attr("src", stillSrc);
-    }
-});
+      state = $(this).attr("data-state");
+      console.log(state);
+      if (state == 'still'){
+          var animatedSrc = $(this).attr("data-animate");
+          $(this).attr("data-state", "animate");
+          $(this).attr("src", animatedSrc);
+      }
+      else {
+        var stillSrc = $(this).attr("data-still");
+        $(this).attr("data-state", "still");
+        $(this).attr("src", stillSrc);
+      }
+    });
 
   });
 });
