@@ -46,9 +46,9 @@ $(".type-term").on("click", function() {
     var results = response.data;
 
     // Looping through each result item
-    for (var i = 0; i < results.length; i++) {
+    for (var i = 0; i < results.length; i++) {  
 
-      var termDiv = $("<div class=\"col-sm-3 col-md-3 col-lg-3 mt mb\">");
+      var termDiv = $("<div class=\"col-sm-3 col-md-3 col-lg-3 gif-container mt mb\">");
       var p = $("<p>").text("Rating: " + results[i].rating);
       var termImage = $("<img>");
 
@@ -58,6 +58,7 @@ $(".type-term").on("click", function() {
       termImage.attr("data-animate", results[i].images.fixed_height.url);
       termImage.attr("data-state", "still");
       termImage.addClass("gif");
+      termImage.addClass("img-responsive");
 
       // Appending the paragraph and image tag to the termDiv
       termDiv.append(p);

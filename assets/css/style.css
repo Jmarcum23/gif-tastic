@@ -85,6 +85,10 @@ input[type=submit]:hover {
 	background: #6161db;
 }
 
+.gif-container {
+	min-height: 230px;
+}
+
 footer {
 	min-height: 150px;
 	background: #666;
